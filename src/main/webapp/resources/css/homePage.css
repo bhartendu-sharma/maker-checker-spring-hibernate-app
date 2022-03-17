@@ -1,0 +1,448 @@
+/* common  */
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --preloader-color: #6e636e;
+  /* --nav-bg-color: #1d001e;
+    --main-bg-color: #2c0b2d;     */
+  /* --nav-bg-color: #44b78b; */
+  /* --nav-bg-color: #01546b; */
+  --nav-bg-color: #01546b;
+  --main-bg-color: #0b2d2848;
+  --main-color-1: #ee8683;
+  --main-color-2: #ea1d6f;
+  --main-color-4: #edb23f;
+  --main-color-5: #44b78b;
+  --main-color-6: #987c4d;
+  --main-color-7: #bffa02;
+  --main-color-8: #fc5c0f;
+
+  --main-color-9: #00a1a2;
+  --main-color-10: #00a1a3;
+  --main-color-11: #f433ad;
+  --card-bg-color-1: linear-gradient(to right, #9aa851 0%, #eb466b 100%);
+  --testmonial-bg-color: linear-gradient(to right, #2c0b2d 0%, #eb466b 100%);
+  --default-text-color: #e30184 !important;
+  --element-color: #f9f6ed;
+  /*for service section  */
+  --background-dark: #2d3548;
+  --text-light: rgba(255, 255, 255, 0.6);
+  --text-lighter: rgba(255, 255, 255, 0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* #01546b */
+/* testing purpose start--------- */
+
+.c_th{
+    background-color: #4d5dfb;
+    background-image: linear-gradient(315deg, #4d5dfb 0%, #08c8f6 74%);
+
+}
+tr{
+    background-color: #f907fc;
+    background-image: linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
+}
+tr:hover{
+    background-color: #52a7c1;
+    background-image: linear-gradient(315deg, #52a7c1 0%, #b3f6d8 74%);
+
+}
+body {
+    /* width: 200px;
+    height: 200px; */
+    display: block;
+    position: relative;
+ background-image: url("../images/bg-img-3.jpg");
+
+  }
+
+nav {
+    background: var(--nav-bg-color);
+    padding: 5px 40px;
+    height: 100px;
+    /* background-color: #0abcf9;
+    background-image: linear-gradient(315deg, #0abcf9 0%, #2c69d1 74%); */
+  }
+
+  .my-nav-text.three-d-2 {
+  text-shadow: 0 -1px 0 #858585, 0 1px 10px rgba(0, 0, 0, 0.6),
+    0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 7px 10px rgba(0, 0, 0, 0.25), 0 15px 10px rgba(0, 0, 0, 0.2),
+    0 25px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  } */
+
+/* nav bar css */
+.nav-btn {
+  /* font-size: 80px!important; */
+  z-index: 999;
+  position: absolute;
+  right: 40px;
+}
+
+.nav-btn i {
+  font-size: 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+nav ul li.c-items {
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+
+nav ul li.c-items:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+nav ul li.c-items:hover:after {
+  opacity: 1;
+  bottom: 8px;
+}
+
+nav ul li.logo {
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+nav ul li:hover a {
+  color: cyan;
+}
+
+nav ul li i {
+  font-size: 23px;
+}
+
+nav ul li.nav-btn {
+  display: none;
+}
+
+nav ul li.nav-btn.hide i:before {
+  content: "\f00d";
+}
+
+@media all and (max-width: 900px) {
+  nav {
+    padding: 5px 30px;
+  }
+
+  nav ul li.c-items {
+    width: 100%;
+    display: none;
+  }
+
+  nav ul li.c-items.show {
+    display: block;
+  }
+
+  nav ul li.nav-btn {
+    display: block;
+  }
+
+  nav ul li.c-items:hover {
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff, inset 0 0 10px #66ffff;
+  }
+
+  nav ul li.c-items:hover:after {
+    opacity: 0;
+  }
+}
+
+nav.c-nav.addSticky {
+  /* add claas to element itself note there is no space in writing class with . */
+  background: var(--nav-bg-color) !important;
+  padding: 15px 0;
+  box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.05);
+  transition: 0.5s all ease-in-out;
+  position: fixed;
+}
+
+/*end of nav bar css */
+/* end of customer entry form css */
+
+
+
+
+
+/*view All Customer form css  */
+
+#viewAllCustomerDiv{
+    display: none;
+}
+
+
+
+/* Login Form */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content{
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
+}
+.company__info{
+	background-color: #008080;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+}
+.fa-android{
+	font-size:3em;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;}
+}
+.row > h2{
+	color:#008080;
+}
+.login_form{
+	background-color: #fff;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+.c_login_form{
+	padding: 0 2em;
+}
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: 1em .5em .5em;
+	padding-left: 2em;
+	outline:none;
+	margin:1.5em auto;
+	transition: all .5s ease;
+}
+.form__input:focus{
+	border-bottom-color: #008080;
+	box-shadow: 0 0 5px rgba(0,80,80,.4);
+	border-radius: 4px;
+}
+.login_btn{
+	transition: all .5s ease;
+	width: 70%;
+	border-radius: 30px;
+	color:#008080;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #008080;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+.login_btn:hover, .login_btn:focus{
+	background-color: #008080;
+	color:#fff;
+}
+
+
+
+/* end of login form */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* latest Add new Customer CSS    purpose */
+
+.register{
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+  margin-top: 3%;
+  padding: 3%;
+  }
+  .register-left{
+  text-align: center;
+  color: #fff;
+  margin-top: 4%;
+  }
+  .register-left input{
+  border: none;
+  border-radius: 1.5rem;
+  padding: 2%;
+  width: 60%;
+  background: #f8f9fa;
+  font-weight: bold;
+  color: #383d41;
+  margin-top: 30%;
+  margin-bottom: 3%;
+  cursor: pointer;
+  }
+  .register-right{
+  background: #f8f9fa;
+  border-top-left-radius: 10% 50%;
+  border-bottom-left-radius: 10% 50%;
+  }
+  .register-left img{
+  margin-top: 15%;
+  margin-bottom: 5%;
+  width: 25%;
+  -webkit-animation: mover 2s infinite alternate;
+  animation: mover 1s infinite alternate;
+  }
+  @-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+  }
+  @keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+  }
+  .register-left p{
+  font-weight: lighter;
+  padding: 12%;
+  margin-top: -9%;
+  }
+  .register .register-form{
+  padding: 10%;
+  margin-top: 10%;
+  }
+  .btnRegister{
+  float: right;
+  margin-top: 10%;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 2%;
+  background: #0062cc;
+  color: #fff;
+  font-weight: 600;
+  width: 50%;
+  cursor: pointer;
+  }
+  .register .nav-tabs{
+  margin-top: 3%;
+  border: none;
+  background: #0062cc;
+  border-radius: 1.5rem;
+  width: 28%;
+  float: right;
+  }
+  .register .nav-tabs .nav-link{
+  padding: 2%;
+  height: 34px;
+  font-weight: 600;
+  color: #fff;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  }
+  .register .nav-tabs .nav-link:hover{
+  border: none;
+  }
+  .register .nav-tabs .nav-link.active{
+  width: 100px;
+  color: #0062cc;
+  border: 2px solid #0062cc;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  }
+  .register-heading{
+  text-align: center;
+  margin-top: 8%;
+  margin-bottom: -15%;
+  color: #495057;
+  }
+  /* end of latest new Customer css */
